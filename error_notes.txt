@@ -1,0 +1,4 @@
+Error message
+
+django 1.9 error no such table blog_post after adding a post in admin dashboard
+solution: python manage.py migrate blog
