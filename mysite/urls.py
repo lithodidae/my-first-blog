@@ -18,4 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # url(r'', include('blog.urls')),
+    url(r'^blog/$',"blog.views.post_list"),
+
 ]
