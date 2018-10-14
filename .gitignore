@@ -96,6 +96,15 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+# Sublimetext project settings
+*.sublime-project
+
+# Pycharm project settings
+.idea
+
+# VisualStudio Code project settings
+.vscode
+
 # mkdocs documentation
 /site
 
