@@ -1,0 +1,76 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block meta %}
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% endblock meta %}
+  
+  {% block base_title %}
+  <title>{% block title %}Bootstrap{% endblock title %}</title>
+  {% endblock base_title %}
+
+  {# Base Bootstrap CSS #}
+  {% block bootstrap_css %}
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" />
+  {% endblock bootstrap_css %}
+
+  {# Custom CSS #}
+  {% block css %}
+  <link href="{% static "css/app.css" %}" rel="stylesheet" />
+  {% endblock css %}
+
+  {# Override if you need another version of modernizr #}
+  {% block modernizer %}
+  <script src="{% static "js/vendor/modernizr.js " %}"></script>
+  {% endblock modernizer %}
+
+  {# Custom head JS #} 
+  {% block head_js %}{% endblock head_js %}
+</head>
+
+<body>
+
+  <header>
+    {% block navbar %} {% endblock %}
+  </header>
+
+
+  {% block content %}
+  <div class="container">
+
+    {# Main content goes here #}
+    <div class="content">
+      <div class="col-sm-9">
+        {% block page_content %}{% endblock %}
+      </div>
+    </div>
+
+    {# Sidebar #}
+    <div class="col-sm-3" id="sidebar">
+      {% block sidebar %}  {% endblock %}
+    </div>
+ 
+  </div>
+  {% endblock %}
+
+  {# Override if you need another version of jQuery #}
+  {% block bootstrap_jquery %}
+  <script src="{% static "js/vendor/jquery.min.js" %}"></script>
+  {% endblock bootstrap_jquery %}
+  {# bootstrap JS #}
+  {% block bootstrap_js %}
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+  {% endblock bootstrap_js %}
+  {# Custom JS #}
+  {% block custom_js %}
+  <script src="{% static "js/blog.js" %}"></script>
+  {% endblock custom_js %}
+
+</body>
+
+</html>
