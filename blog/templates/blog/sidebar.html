@@ -1,0 +1,56 @@
+ 
+
+{% block sidebar %}
+
+<h4><a href=" ">Subscribe to my RSS feed</a>
+</h4>
+            
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Categories</div>
+    <div class="panel-body">
+    
+    <!-- List group inside panel -->
+    <ul class="list-group">
+      
+      <li class="list-group-item" class="selected"  >
+      <a href=" ">{{ category.name }}</a>
+      <span class="badge"> </span>
+      </li>
+  
+    </ul>   
+   
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Tags</div>
+  <div class="panel-body">
+   
+      <a href="" class="btn btn-primary btn-xs" role="button"><b> </b> </a>    
+    
+
+  </div>
+</div>
+<hr>
+<div class="nav-justified">
+  <ul class="nav nav-tabs nav-justified">
+      <li class="active"><a href="#home" data-toggle="tab">Related</a></li>
+      <li><a href="#profile" data-toggle="tab">Popular</a></li>
+      
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="home">
+      <p> </p>
+    </div>
+    <div class="tab-pane fade" id="profile">
+      <p> </p>
+    </div>     
+   </div>
+</div>               
+<hr>
+ 
+      
+<hr>
+
+{% endblock %}
