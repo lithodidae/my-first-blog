@@ -36,7 +36,9 @@
 <body>
 
   <header>
-    {% block navbar %} {% endblock %}
+    {% block navbar %} 
+      {% include 'blog/nav.html' %}
+    {% endblock %}
   </header>
 
 
